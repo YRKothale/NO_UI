@@ -3,26 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Screen Architecture | The Natural Home</title>
+    <title>AURA | Adaptive Unified Responsive Automation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Chosen Palette: Ultra-minimalist Monochrome. Background: white. Text: neutral-900 (near black) to neutral-500 (gray). Borders: neutral-200. -->
+    <!-- Palette: Ultra-minimalist Monochrome. Background: white. Text: neutral-900 to neutral-500. Borders: neutral-200. -->
     
-    <!-- Application Structure Plan: Fixed left-sidebar navigation with a full-height scrolling right pane. 
-         The narrative has pivoted from "Autonomous/Robotic" to "Human-in-the-loop/Natural Interaction". 
-         Sections: Intro -> Natural Interaction (The core pivot) -> Inclusive Demographics -> Sensory/Cognitive Support -> ARC Overview. -->
-    
-    <!-- Visualization & Content Choices: 
-         1. Hero/Intro: Massive typography establishing the "Partnership" philosophy.
-         2. Natural Interaction: Interactive HTML/CSS grid highlighting TUIs, Voice, and Gestures (Goal: Inform/Organize).
-         3. Inclusive Demographics: Chart.js Radar Chart showing how different age groups (Kids, Adults, Elderly) utilize different non-screen modalities. (Goal: Compare/Relationships).
-         4. Multi-Modal Feedback: HTML/CSS matrix layout showing how the house talks back. (Goal: Organize).
-         5. ARC Overview: Plain-text editorial layout reflecting the new co-creation logic.
-    -->
-
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
 
@@ -38,7 +24,7 @@
             position: relative;
             width: 100%;
             max-width: 100%;
-            height: 400px;
+            height: 350px;
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -54,14 +40,13 @@
             font-weight: 600;
         }
 
-        .hw-tab { cursor: pointer; transition: all 0.2s; }
-        .hw-tab.active {
+        .aura-tab { cursor: pointer; transition: all 0.2s; }
+        .aura-tab.active {
             background-color: #171717;
             color: #ffffff;
             border-color: #171717;
         }
-        .hw-tab.active .text-neutral-500 { color: #a3a3a3; }
-        .hw-tab.active .icon-unicode { color: #ffffff; }
+        .aura-tab.active .text-neutral-500 { color: #a3a3a3; }
 
         section {
             min-height: 100vh;
@@ -72,7 +57,7 @@
             padding-bottom: 6rem;
         }
         
-        .layer-badge {
+        .tag-badge {
             display: inline-block;
             font-size: 0.65rem;
             font-weight: 700;
@@ -84,13 +69,6 @@
             border-radius: 0.25rem;
             margin-bottom: 1rem;
         }
-
-        .slip-callout {
-            background-color: #fafafa;
-            border-left: 2px solid #171717;
-            padding: 1.25rem;
-            margin-top: 0.75rem;
-        }
     </style>
 </head>
 <body class="flex h-screen overflow-hidden selection:bg-neutral-900 selection:text-white">
@@ -98,25 +76,24 @@
     <!-- Fixed Sidebar Navigation -->
     <nav class="w-64 lg:w-80 flex-shrink-0 h-full border-r border-neutral-200 flex flex-col bg-white z-50">
         <div class="p-8 pb-12">
-            <p class="text-[10px] font-bold tracking-[0.2em] text-neutral-500 uppercase mb-4">Master Architecture</p>
-            <h1 class="text-2xl font-bold tracking-tight text-neutral-900">Minimal Screen</h1>
-            <p class="text-sm text-neutral-500 mt-1">The Natural Home System</p>
+            <p class="text-[10px] font-bold tracking-[0.2em] text-neutral-500 uppercase mb-4">Product & UX Strategy</p>
+            <h1 class="text-3xl font-bold tracking-tight text-neutral-900">AURA</h1>
+            <p class="text-xs text-neutral-500 mt-2 leading-relaxed">Adaptive Unified<br>Responsive Automation</p>
         </div>
         
         <ul class="flex flex-col px-8 space-y-6" id="nav-menu">
-            <li><a href="#intro" class="nav-link active block pl-4 text-sm text-neutral-400 hover:text-neutral-900">00. Introduction</a></li>
-            <li><a href="#interaction" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">01. Natural Interaction</a></li>
-            <li><a href="#demographics" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">02. Inclusive Design</a></li>
-            <li><a href="#copilot" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">03. The Edge Co-Pilot</a></li>
-            <li><a href="#feedback" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">04. Ambient Feedback</a></li>
-            <li><a href="#arcoverview" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">05. ARC Overview</a></li>
+            <li><a href="#vision" class="nav-link active block pl-4 text-sm text-neutral-400 hover:text-neutral-900">01. The AURA Vision</a></li>
+            <li><a href="#problems" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">02. Problems Solved</a></li>
+            <li><a href="#features" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">03. Core Capabilities</a></li>
+            <li><a href="#ux" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">04. Natural UX</a></li>
+            <li><a href="#architecture" class="nav-link block pl-4 text-sm text-neutral-400 hover:text-neutral-900">05. SLIP Architecture</a></li>
         </ul>
 
         <div class="mt-auto p-8">
             <div class="text-[10px] text-neutral-400 uppercase tracking-widest leading-loose">
                 Confidential<br>
-                Human-in-the-Loop<br>
-                v4.0
+                AURA Platform v1.0<br>
+                Human-in-the-Loop
             </div>
         </div>
     </nav>
@@ -125,235 +102,261 @@
     <main class="flex-1 overflow-y-auto no-scrollbar scroll-smooth relative" id="main-scroll">
         <div class="max-w-4xl mx-auto px-12 lg:px-24">
 
-            <!-- 00. Introduction -->
-            <section id="intro">
-                <p class="text-sm font-semibold tracking-widest text-neutral-400 uppercase mb-6">Thesis</p>
+            <!-- 01. The AURA Vision -->
+            <section id="vision">
+                <span class="tag-badge">Product Vision</span>
                 <h2 class="text-5xl lg:text-7xl font-bold tracking-tighter text-neutral-900 leading-[1.1] mb-8">
-                    Agency without<br>the Friction.
+                    A home that<br>understands you.
                 </h2>
                 <div class="w-12 h-1 bg-neutral-900 mb-8"></div>
-                <p class="text-xl text-neutral-600 leading-relaxed max-w-2xl font-light mb-8">
-                    Moving away from screen fatigue does not mean surrendering control to a robotic AI. We are building a home that partners with its inhabitants. We replace the friction of menus, apps, and toggles with the joy of natural, tactile, and intuitive interaction.
+                <p class="text-2xl text-neutral-900 font-medium leading-relaxed max-w-2xl mb-4">
+                    Not one you have to program.
+                </p>
+                <p class="text-lg text-neutral-600 leading-relaxed max-w-2xl font-light mb-8">
+                    <strong>AURA (Adaptive Unified Responsive Automation)</strong> is a screen-less, voice, and sensor-first AI home system. It observes, adapts, predicts, and acts—learning your lifestyle automatically without manual programming or complex apps.
                 </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-neutral-100">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-neutral-100">
                     <div>
-                        <h3 class="font-bold text-neutral-900 mb-2">The Human-in-the-Loop</h3>
-                        <p class="text-sm text-neutral-600 leading-relaxed">The system does not dictate your life; it facilitates it. The user remains in total control, but the methods of control are organic, playful, and deeply personalized.</p>
+                        <h3 class="font-bold text-neutral-900 mb-2">Busy Professionals</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">Want deep automation and comfort without the burden of managing or programming it.</p>
                     </div>
                     <div>
-                        <h3 class="font-bold text-neutral-900 mb-2">Multi-Generational Joy</h3>
-                        <p class="text-sm text-neutral-600 leading-relaxed">From a 5-year-old child to an 85-year-old grandparent, the home adapts its interaction modalities to suit the physical and cognitive preferences of every user.</p>
+                        <h3 class="font-bold text-neutral-900 mb-2">Families</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">Require multi-user personalization, safety monitoring, and intuitive controls for kids.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-neutral-900 mb-2">Elderly Users</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">Benefit immensely from zero-interaction control, predictive maintenance, and passive security.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 01. Natural Interaction -->
-            <section id="interaction" class="border-t border-neutral-200">
+            <!-- 02. Problems Solved -->
+            <section id="problems" class="border-t border-neutral-200">
                 <div class="mb-12">
-                    <span class="layer-badge">Input Modalities</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">Natural Interaction</h2>
+                    <span class="tag-badge">Market Gap</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">The Broken Smart Home</h2>
                     <p class="text-lg text-neutral-600 max-w-2xl font-light">
-                        We are abandoning the glass screen. Instead, users interact with their environment through physical objects, natural body language, and conversational voice.
+                        Legacy smart homes are neither smart nor homes. They are complex IT networks that demand constant human management. AURA solves these core failures.
                     </p>
                 </div>
 
-                <!-- Interactive Sensory Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    <div class="hw-tab active border border-neutral-200 p-6 rounded-lg" onclick="switchTab('tangible', this)">
-                        <div class="text-2xl mb-4 icon-unicode text-neutral-900">&#129521;</div> 
-                        <h3 class="font-semibold text-sm mb-1">Tangible UI (TUIs)</h3>
-                        <p class="text-xs text-neutral-500">Physical Objects</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-neutral-50 border border-neutral-200 rounded-lg">
+                        <div class="text-2xl mb-3">&#128260;</div>
+                        <h4 class="font-bold text-neutral-900 mb-2">Manual Setup & Rules</h4>
+                        <p class="text-sm text-neutral-600">Current systems require complex "If This Then That" programming. AURA learns by observation, eliminating manual setup.</p>
                     </div>
-                    <div class="hw-tab border border-neutral-200 bg-white p-6 rounded-lg" onclick="switchTab('gesture', this)">
-                        <div class="text-2xl mb-4 icon-unicode text-neutral-900">&#128075;</div>
-                        <h3 class="font-semibold text-sm text-neutral-900 mb-1">Micro-Gestures</h3>
-                        <p class="text-xs text-neutral-500">Body Language</p>
+                    <div class="p-6 bg-neutral-50 border border-neutral-200 rounded-lg">
+                        <div class="text-2xl mb-3">&#128241;</div>
+                        <h4 class="font-bold text-neutral-900 mb-2">Fragmented App Experience</h4>
+                        <p class="text-sm text-neutral-600">Users are tired of managing 10 different apps for lights, sound, and HVAC. AURA unifies this under a single ambient intelligence.</p>
                     </div>
-                    <div class="hw-tab border border-neutral-200 bg-white p-6 rounded-lg" onclick="switchTab('voice', this)">
-                        <div class="text-2xl mb-4 icon-unicode text-neutral-900">&#128483;&#65039;</div> 
-                        <h3 class="font-semibold text-sm text-neutral-900 mb-1">Contextual Voice</h3>
-                        <p class="text-xs text-neutral-500">Gaze & Speech</p>
+                    <div class="p-6 bg-neutral-50 border border-neutral-200 rounded-lg">
+                        <div class="text-2xl mb-3">&#128106;</div>
+                        <h4 class="font-bold text-neutral-900 mb-2">Alienates Non-Tech Users</h4>
+                        <p class="text-sm text-neutral-600">Traditional setups are too hard for children or the elderly to use. AURA's "zero-screen" UX makes interaction natural for everyone.</p>
                     </div>
-                </div>
-
-                <div class="bg-neutral-50 border border-neutral-200 p-8 rounded-lg min-h-[220px] flex items-center">
-                    <div id="content-tangible" class="tab-content block w-full">
-                        <h4 class="text-lg font-bold text-neutral-900 mb-3">Tangible User Interfaces (TUIs)</h4>
-                        <p class="text-sm text-neutral-600 mb-4 max-w-2xl">
-                            Physical, non-digital objects that map to digital actions. They restore the satisfying tactile feel of analog controls while wielding immense digital power.
-                        </p>
-                        <ul class="space-y-2 text-sm text-neutral-600 max-w-2xl list-disc pl-5">
-                            <li><strong class="text-neutral-900">Smart Blocks:</strong> A child can change the room's music playlist simply by placing a specific wooden block on a shelf.</li>
-                            <li><strong class="text-neutral-900">Analog Dials:</strong> Beautiful, weighty physical knobs placed on tables that allow the elderly to intuitively dial up the temperature or dim lights without navigating an app.</li>
-                        </ul>
-                    </div>
-                    
-                    <div id="content-gesture" class="tab-content hidden w-full">
-                        <h4 class="text-lg font-bold text-neutral-900 mb-3">Micro-Gestures & Posture</h4>
-                        <p class="text-sm text-neutral-600 mb-4 max-w-2xl">
-                            The home uses mmWave radar not just to watch you, but to <em>listen</em> to your body language.
-                        </p>
-                        <ul class="space-y-2 text-sm text-neutral-600 max-w-2xl list-disc pl-5">
-                            <li><strong class="text-neutral-900">Intentional Gestures:</strong> A simple upward flick of the wrist in the air raises the music volume. A flat palm facing down instantly turns off all media in the room.</li>
-                            <li><strong class="text-neutral-900">Postural Intent:</strong> Sitting down heavily on a reading chair automatically focuses a reading light over your shoulder.</li>
-                        </ul>
-                    </div>
-
-                    <div id="content-voice" class="tab-content hidden w-full">
-                        <h4 class="text-lg font-bold text-neutral-900 mb-3">Contextual Voice (No Wake Words)</h4>
-                        <p class="text-sm text-neutral-600 mb-4 max-w-2xl">
-                            We eliminate the robotic "Hey Siri" or "Alexa" commands. Interaction feels like talking to a human co-pilot in the room.
-                        </p>
-                        <ul class="space-y-2 text-sm text-neutral-600 max-w-2xl list-disc pl-5">
-                            <li><strong class="text-neutral-900">Gaze Tracking:</strong> Because the system knows where you are and what direction you are facing, you can simply look at the window blinds and say, "Close these," and the system understands the context.</li>
-                        </ul>
+                    <div class="p-6 bg-neutral-50 border border-neutral-200 rounded-lg">
+                        <div class="text-2xl mb-3">&#128274;</div>
+                        <h4 class="font-bold text-neutral-900 mb-2">Cloud Privacy Concerns</h4>
+                        <p class="text-sm text-neutral-600">Transmitting home data to the cloud is a massive privacy risk. AURA processes data locally on the Edge, ensuring total security.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 02. Inclusive Demographics -->
-            <section id="demographics" class="border-t border-neutral-200">
+            <!-- 03. Core Capabilities -->
+            <section id="features" class="border-t border-neutral-200">
                 <div class="mb-12">
-                    <span class="layer-badge">Inclusivity</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">Designed for Everyone</h2>
+                    <span class="tag-badge">The AURA Engine</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">Core Capabilities</h2>
                     <p class="text-lg text-neutral-600 max-w-2xl font-light">
-                        A truly intelligent home adapts its interface to the user, not the other way around. By offering multiple input modalities, we ensure no one is left behind by technology.
+                        Powered by local Edge AI, AURA shifts the environment from static schedules to dynamic, predictive intelligence.
+                    </p>
+                </div>
+
+                <!-- Interactive Features Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+                    <div class="aura-tab active border border-neutral-200 p-4 rounded-lg text-center" onclick="switchTab('routine', this)">
+                        <div class="text-xl mb-2">&#128200;</div> 
+                        <h3 class="font-semibold text-xs">Routine Learning</h3>
+                    </div>
+                    <div class="aura-tab border border-neutral-200 bg-white p-4 rounded-lg text-center" onclick="switchTab('person', this)">
+                        <div class="text-xl mb-2">&#128100;</div>
+                        <h3 class="font-semibold text-xs">Personalisation</h3>
+                    </div>
+                    <div class="aura-tab border border-neutral-200 bg-white p-4 rounded-lg text-center" onclick="switchTab('security', this)">
+                        <div class="text-xl mb-2">&#128269;</div> 
+                        <h3 class="font-semibold text-xs">Security Monitor</h3>
+                    </div>
+                    <div class="aura-tab border border-neutral-200 bg-white p-4 rounded-lg text-center" onclick="switchTab('voice', this)">
+                        <div class="text-xl mb-2">&#128483;&#65039;</div> 
+                        <h3 class="font-semibold text-xs">Voice + Control</h3>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-50 border border-neutral-200 p-8 rounded-lg min-h-[320px] flex items-start">
+                    
+                    <!-- Routine Learning -->
+                    <div id="content-routine" class="tab-content block w-full">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-4 mb-4">
+                            <h4 class="text-xl font-bold text-neutral-900">Routine Learning</h4>
+                            <span class="text-xs font-mono bg-neutral-200 px-2 py-1 rounded">No Manual Setup</span>
+                        </div>
+                        <p class="text-sm text-neutral-700 mb-4 leading-relaxed">
+                            The system observes daily behaviour over 1-2 weeks and automatically builds personalised home routines. No "If/Then" programming required.
+                        </p>
+                        <div class="bg-white p-4 border border-neutral-200 rounded mb-4">
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">Example Scenario</span>
+                            <p class="text-sm text-neutral-800">You wake at 7 AM on weekdays. AURA learns this: it automatically turns on soft lights, warms the bathroom floor, and skips the routine on weekends.</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">How AI Works</span>
+                            <p class="text-xs text-neutral-600">Machine Learning detects patterns via clustering algorithms. Anomaly detection identifies schedule changes, and continuous retraining ensures the system evolves with you.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Personalisation -->
+                    <div id="content-person" class="tab-content hidden w-full">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-4 mb-4">
+                            <h4 class="text-xl font-bold text-neutral-900">Personalisation Per User</h4>
+                            <span class="text-xs font-mono bg-neutral-200 px-2 py-1 rounded">Multi-User Ready</span>
+                        </div>
+                        <p class="text-sm text-neutral-700 mb-4 leading-relaxed">
+                            AURA recognises each family member through voice, UWB identity, or motion patterns, and applies their specific preferences automatically.
+                        </p>
+                        <div class="bg-white p-4 border border-neutral-200 rounded mb-4">
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">Example Scenario</span>
+                            <p class="text-sm text-neutral-800">Dad enters the living room—temp adjusts to 22°C, evening news plays. A child enters later—a soft nightlight activates, and parental audio controls enforce.</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">How AI Works</span>
+                            <p class="text-xs text-neutral-600">Voice modeling and UWB beaconing verify identity locally. Collaborative filtering applies historically preferred states to the specific user.</p>
+                        </div>
+                    </div>
+
+                    <!-- Security Monitoring -->
+                    <div id="content-security" class="tab-content hidden w-full">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-4 mb-4">
+                            <h4 class="text-xl font-bold text-neutral-900">Security Monitoring</h4>
+                            <span class="text-xs font-mono bg-neutral-200 px-2 py-1 rounded">24/7 Passive Guard</span>
+                        </div>
+                        <p class="text-sm text-neutral-700 mb-4 leading-relaxed">
+                            The system establishes a normal behavior baseline. It flags anything unusual—odd entry times, unknown presence, or spatial anomalies.
+                        </p>
+                        <div class="bg-white p-4 border border-neutral-200 rounded mb-4">
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">Example Scenario</span>
+                            <p class="text-sm text-neutral-800">A door opens at 3 AM. AURA detects it breaks the baseline, instantly alerts the owner, turns on all perimeter lights, and logs the event.</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">How AI Works</span>
+                            <p class="text-xs text-neutral-600">Predictive behavioral modeling establishes a baseline. Advanced anomaly detection and presence pattern analysis flag deviations instantly.</p>
+                        </div>
+                    </div>
+
+                    <!-- Voice + Control -->
+                    <div id="content-voice" class="tab-content hidden w-full">
+                        <div class="flex items-center justify-between border-b border-neutral-200 pb-4 mb-4">
+                            <h4 class="text-xl font-bold text-neutral-900">Contextual Voice + Control</h4>
+                            <span class="text-xs font-mono bg-neutral-200 px-2 py-1 rounded">No Wake Words</span>
+                        </div>
+                        <p class="text-sm text-neutral-700 mb-4 leading-relaxed">
+                            Natural speech understanding paired with contextual awareness. No robotic wake words, no exact syntax needed. Fully multilingual.
+                        </p>
+                        <div class="bg-white p-4 border border-neutral-200 rounded mb-4">
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">Example Scenario</span>
+                            <p class="text-sm text-neutral-800">Just say "It's freezing in here" out loud, and the heat increases. Say "Goodnight" while in bed, and AURA turns off lights and activates sleep mode.</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase text-neutral-500 block mb-1">How AI Works</span>
+                            <p class="text-xs text-neutral-600">Local Natural Language Processing (NLP) models combined with sentiment analysis to understand intent rather than just parsing rigid commands.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 04. Natural UX -->
+            <section id="ux" class="border-t border-neutral-200">
+                <div class="mb-12">
+                    <span class="tag-badge">UX Strategy</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">Human-in-the-Loop UX</h2>
+                    <p class="text-lg text-neutral-600 max-w-2xl font-light">
+                        AURA is designed to be a partner, not a dictator. When autonomous prediction isn't enough, users interact naturally through physical objects, body language, and ambient feedback.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
                     <div>
-                        <h3 class="text-xl font-bold text-neutral-900 mb-4">The Generational Shift</h3>
-                        <p class="text-sm text-neutral-600 mb-6 leading-relaxed">
-                            A single screen-based app forces a 7-year-old, a 35-year-old, and an 80-year-old to use the exact same complex interface. 
-                        </p>
-                        <ul class="space-y-4 text-sm text-neutral-600">
-                            <li><strong class="text-neutral-900">Children:</strong> Thrive on tactile play. TUIs (placing objects, touching surfaces) empower them to control their environment playfully.</li>
-                            <li><strong class="text-neutral-900">Adults:</strong> Prefer speed and efficiency, utilizing micro-gestures and contextual voice while multitasking.</li>
-                            <li><strong class="text-neutral-900">Elderly:</strong> Require familiarity and accessibility. High reliance on physical dials (TUIs) that mimic legacy analog switches, combined with conversational voice assistance.</li>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-4">Interaction without Screens</h3>
+                        <ul class="space-y-4 text-sm text-neutral-600 mb-6">
+                            <li><strong class="text-neutral-900 block mb-1">Tangible UIs (TUIs):</strong> Physical objects (like beautifully machined analog dials) restore satisfying tactile feedback. Perfect for children and the elderly.</li>
+                            <li><strong class="text-neutral-900 block mb-1">Micro-Gestures:</strong> A simple flick of the wrist raises volume; a flat palm down turns off a room. Tracked silently by mmWave radar.</li>
+                            <li><strong class="text-neutral-900 block mb-1">Ambient Feedback:</strong> AURA talks back via the environment. A soft pulse of light confirms a locked door; a subtle localized warm breeze signals the thermostat adjusting.</li>
                         </ul>
                     </div>
                     
-                    <div class="border border-neutral-200 p-6 rounded-lg bg-neutral-50 flex flex-col items-center">
-                        <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-widest text-center mb-6">Preferred Modality by Demographic</h4>
-                        <div class="chart-container w-full" style="height: 300px;">
-                            <canvas id="demoChart"></canvas>
+                    <div class="border border-neutral-200 p-6 rounded-lg bg-neutral-50">
+                        <h4 class="text-xs font-bold text-neutral-900 uppercase tracking-widest text-center mb-4">Learning Curve: Manual Inputs over Time</h4>
+                        <div class="chart-container" style="height: 250px;">
+                            <canvas id="learningChart"></canvas>
                         </div>
+                        <p class="text-xs text-center text-neutral-500 mt-4">As AURA observes routines, the need for manual interactions (voice/gestures) drops to near zero.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 03. Edge Co-Pilot -->
-            <section id="copilot" class="border-t border-neutral-200">
+            <!-- 05. SLIP Architecture -->
+            <section id="architecture" class="border-t border-neutral-200">
                 <div class="mb-12">
-                    <span class="layer-badge">Cognition</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">The Edge Co-Pilot</h2>
+                    <span class="tag-badge">Technical Foundation</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">The SLIP Architecture</h2>
                     <p class="text-lg text-neutral-600 max-w-2xl font-light">
-                        The AI does not run the house; it assists you. It manages the mundane (parasitic power loads, baseline HVAC) while offering joyful, personalized suggestions.
+                        To ensure AURA is accessible and scalable, all hardware and software choices follow the SLIP framework. No million-dollar retrofits required.
                     </p>
                 </div>
 
-                <div class="space-y-8">
-                    <div class="p-6 border border-neutral-200 rounded-lg">
-                        <h3 class="font-bold text-neutral-900 mb-2">The Context Graph as an Assistant</h3>
-                        <p class="text-sm text-neutral-600 leading-relaxed">
-                            The local Edge AI aggregates spatial data (mmWave), biometric data (wearable heart rate), and UWB identity. Instead of autonomously forcing a change, it readies the environment. If it detects high stress, it might subtly dim the lights and prepare a calm playlist, waiting for a simple confirming nod (micro-gesture) or voice prompt from you to engage.
-                        </p>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+                    <div class="p-5 border border-neutral-200 rounded bg-white text-center">
+                        <div class="text-xl font-bold text-neutral-900 mb-1">S</div>
+                        <div class="text-xs text-neutral-500 uppercase tracking-widest">Simple to Install</div>
                     </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 border border-neutral-200 rounded-lg bg-neutral-50">
-                            <h4 class="font-bold text-neutral-900 mb-2">Privacy by Architecture</h4>
-                            <p class="text-sm text-neutral-600">Because interaction relies heavily on biometrics and behavior, 100% of this processing happens on a local Edge node (e.g., Mac Mini M4). No cloud processing guarantees trust.</p>
-                        </div>
-                        <div class="p-6 border border-neutral-200 rounded-lg bg-neutral-50">
-                            <h4 class="font-bold text-neutral-900 mb-2">Commodity Empowerment</h4>
-                            <p class="text-sm text-neutral-600">The intelligence lives in the software, allowing the use of cheap SLIP hardware (ESP32s, $5 radar modules) to democratize this high-end experience.</p>
-                        </div>
+                    <div class="p-5 border border-neutral-200 rounded bg-white text-center">
+                        <div class="text-xl font-bold text-neutral-900 mb-1">L</div>
+                        <div class="text-xs text-neutral-500 uppercase tracking-widest">Low Initial Cost</div>
                     </div>
-                </div>
-            </section>
-
-            <!-- 04. Ambient Feedback -->
-            <section id="feedback" class="border-t border-neutral-200">
-                <div class="mb-12">
-                    <span class="layer-badge">Output</span>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">Ambient Feedback</h2>
-                    <p class="text-lg text-neutral-600 max-w-2xl font-light">
-                        A truly interactive system must talk back. Without screens, the house communicates confirmations and states through the environment itself.
-                    </p>
-                </div>
-
-                <div class="space-y-4">
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="flex-1 p-5 bg-neutral-50 border border-neutral-200 rounded">
-                            <strong class="text-neutral-900 block mb-2 text-sm">Light & Shadow</strong>
-                            <p class="text-xs text-neutral-600 mb-3">Baseboards gently pulse a soft blue to confirm a door has locked. "Follow-me" lighting softly illuminates the path ahead as you walk, acting as a silent dialogue between you and the space.</p>
-                        </div>
-                        <div class="flex-1 p-5 bg-neutral-50 border border-neutral-200 rounded">
-                            <strong class="text-neutral-900 block mb-2 text-sm">Haptic & Tactile Response</strong>
-                            <p class="text-xs text-neutral-600 mb-3">When you use a micro-gesture to turn down the volume, your smartwatch delivers a satisfying "click" vibration. The environment feels tactile and responsive, not floaty.</p>
-                        </div>
+                    <div class="p-5 border border-neutral-200 rounded bg-white text-center">
+                        <div class="text-xl font-bold text-neutral-900 mb-1">I</div>
+                        <div class="text-xs text-neutral-500 uppercase tracking-widest">Instant Value</div>
                     </div>
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="flex-1 p-5 bg-neutral-50 border border-neutral-200 rounded">
-                            <strong class="text-neutral-900 block mb-2 text-sm">Auditory Sonification</strong>
-                            <p class="text-xs text-neutral-600 mb-3">Instead of harsh beeps, the home uses organic soundscapes. A pleasant, low-frequency chime confirms a command. Ultrasonic beaming directs a podcast specifically to your armchair.</p>
-                        </div>
-                        <div class="flex-1 p-5 bg-neutral-50 border border-neutral-200 rounded">
-                            <strong class="text-neutral-900 block mb-2 text-sm">Thermal Signaling</strong>
-                            <p class="text-xs text-neutral-600 mb-3">A localized warm radiant pulse from a floor tile or wall panel subtly signals that the system has recognized your presence and is adjusting the micro-climate to your preference.</p>
-                        </div>
+                    <div class="p-5 border border-neutral-200 rounded bg-white text-center">
+                        <div class="text-xl font-bold text-neutral-900 mb-1">P</div>
+                        <div class="text-xs text-neutral-500 uppercase tracking-widest">Plays Well</div>
                     </div>
                 </div>
-            </section>
 
-            <!-- 05. ARC Overview -->
-            <section id="arcoverview" class="border-t border-neutral-200">
-                <div class="mb-16">
-                    <p class="text-sm font-semibold tracking-widest text-neutral-400 uppercase mb-4">Architecture Report</p>
-                    <h2 class="text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 mb-6">ARC Overview</h2>
-                </div>
-
-                <!-- Plain Text Editorial Layout -->
                 <div class="space-y-8 max-w-3xl text-neutral-800">
-                    <p class="text-xl font-light leading-relaxed mb-10 text-neutral-600">
-                        The ARC (Adaptive Response Control) framework defines the methodology by which the Minimal Screen system co-creates the environment with the user, blending predictive intelligence with organic human inputs.
+                    <h3 class="text-2xl font-bold tracking-tight mb-4">1. The Sensory Layer (No Cameras)</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        AURA replaces invasive cameras with <strong>mmWave Radar</strong> (to detect micro-movements, breathing, and posture) and <strong>UWB Anchors</strong> (for centimeter-level identity tracking). It utilizes inexpensive commodity hardware ($40 radar nodes) deployed via standard USB-C.
                     </p>
 
-                    <h3 class="text-2xl font-bold tracking-tight mt-12 mb-6">1. The Co-Pilot State Machine</h3>
-                    <p class="text-base leading-relaxed mb-6">
-                        Traditional smart home systems operate on a rigid boolean logic framework. The revised ARC framework operates as a probabilistic co-pilot. The system continuously calculates the probability of the user's current "State" based on a weighted matrix of inputs (UWB identity, mmWave posture, biometric stress), but it prioritizes <strong>Intentional Modalities</strong> (TUIs, Gestures, Voice) over autonomous assumptions.
-                    </p>
-                    <p class="text-base leading-relaxed mb-6">
-                        For example, if the system predicts a "High-Energy/Stress" state upon a user's evening return, it prepares the environment (adjusting background HVAC, cueing a lighting scene) but waits for a soft confirmation—like the user placing their keys on a designated Tangible Smart Surface—to execute the full environmental shift, preserving user agency.
+                    <h3 class="text-2xl font-bold tracking-tight mb-4">2. The Cognitive Layer (Local Edge AI)</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        All Routine Learning and Personalisation happens locally on a dedicated Edge Node (e.g., Mac Mini M4 or Raspberry Pi 5). AURA builds a <strong>Context Graph</strong> mapping temporal, spatial, and physiological data. Raw data never goes to the cloud, guaranteeing absolute privacy.
                     </p>
 
-                    <h3 class="text-2xl font-bold tracking-tight mt-12 mb-6">2. Modality Translation Layer</h3>
-                    <p class="text-base leading-relaxed mb-6">
-                        Data ingestion is highly specialized. Spatial vectors (mmWave) and physical object tracking (TUIs) are ingested continuously at 10Hz directly into the local Edge NPU to ensure physical interactions feel as instantaneous as flipping a traditional analog switch. The system achieves sub-50ms latency, critical for maintaining the illusion of a naturally responsive environment.
-                    </p>
-
-                    <h3 class="text-2xl font-bold tracking-tight mt-12 mb-6">3. Actuation and Feedback Loops</h3>
-                    <p class="text-base leading-relaxed mb-6">
-                        A critical failure of purely autonomous environments is the lack of user feedback. ARC mandates a strict 1:1 feedback loop for all explicit interactions.
-                    </p>
-                    <ul class="list-disc pl-6 space-y-3 mb-6 text-base leading-relaxed">
-                        <li><strong>Ambient Affirmation:</strong> When a user executes a micro-gesture or voice command, the ARC engine triggers an immediate ambient response (e.g., a synchronized haptic pulse on a wearable and a subtle auditory chime) to confirm the system understood the intent.</li>
-                        <li><strong>Confidence Thresholds:</strong> Purely autonomous adjustments (like parasitic load shedding in empty rooms) are executed silently. However, state changes affecting human comfort require a 92% NPU prediction confidence or explicit human initiation via natural interfaces.</li>
-                    </ul>
-
-                    <h3 class="text-2xl font-bold tracking-tight mt-12 mb-6">4. Edge-Local Privacy Assurance</h3>
-                    <p class="text-base leading-relaxed mb-6">
-                        To foster an environment where users feel comfortable utilizing natural body language and voice, all NLP (Natural Language Processing) and gesture recognition occurs on the local node. Raw acoustic data and mmWave point clouds are classified as Ephemeral Data, processed in volatile memory, and purged instantly. Only the structural "intent vectors" are retained for localized federated learning, ensuring the home remains a private sanctuary.
+                    <h3 class="text-2xl font-bold tracking-tight mb-4">3. Interoperability & Actuation</h3>
+                    <p class="text-sm leading-relaxed mb-6">
+                        AURA "Plays Well" by acting as an intelligent translation layer. It connects via Matter/Thread to orchestrate the existing ecosystem devices you already own (Philips Hue, Sonos, Ecobee) without requiring you to replace them.
                     </p>
                 </div>
 
                 <div class="mt-32 text-center pb-24">
                     <div class="w-12 h-1 bg-neutral-200 mx-auto mb-6"></div>
-                    <p class="text-sm font-bold text-neutral-900 uppercase tracking-widest mb-2">End of Architecture Brief</p>
-                    <p class="text-xs text-neutral-500">Minimal Screen System / Human-in-the-Loop v4.0</p>
+                    <p class="text-sm font-bold text-neutral-900 uppercase tracking-widest mb-2">Ready to Build the Intelligent Home?</p>
+                    <p class="text-xs text-neutral-500">AURA Platform / v1.0</p>
                 </div>
             </section>
 
@@ -361,21 +364,15 @@
     </main>
 
     <script>
-        // Interactive Tabs Logic
+        // Interactive Tabs Logic for AURA Features
         function switchTab(tabId, element) {
-            document.querySelectorAll('.hw-tab').forEach(tab => {
+            document.querySelectorAll('.aura-tab').forEach(tab => {
                 tab.classList.remove('active', 'bg-neutral-900', 'text-white', 'border-neutral-900');
                 tab.classList.add('bg-white', 'text-neutral-900', 'border-neutral-200');
-                tab.querySelector('h3').classList.add('text-neutral-900');
-                tab.querySelector('.icon-unicode').classList.remove('text-white');
-                tab.querySelector('.icon-unicode').classList.add('text-neutral-900');
             });
             
             element.classList.add('active', 'bg-neutral-900', 'text-white', 'border-neutral-900');
             element.classList.remove('bg-white', 'border-neutral-200');
-            element.querySelector('h3').classList.remove('text-neutral-900');
-            element.querySelector('.icon-unicode').classList.remove('text-neutral-900');
-            element.querySelector('.icon-unicode').classList.add('text-white');
 
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.add('hidden');
@@ -415,85 +412,57 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // Chart.js Setup for Radar Chart (Inclusive Demographics)
+            // Chart.js Setup for Routine Learning Curve
             Chart.defaults.font.family = "'Inter', sans-serif";
             Chart.defaults.color = '#737373'; 
             
-            const demoCtx = document.getElementById('demoChart').getContext('2d');
-            new Chart(demoCtx, {
-                type: 'radar',
+            const learningCtx = document.getElementById('learningChart').getContext('2d');
+            new Chart(learningCtx, {
+                type: 'line',
                 data: {
-                    labels: [
-                        'Tangible UI (Objects/Dials)', 
-                        'Micro-Gestures', 
-                        'Contextual Voice', 
-                        'Automated/Predictive', 
-                        'Ambient Feedback Reliance'
-                    ],
+                    labels: ['Day 1', 'Day 3', 'Day 7', 'Week 2', 'Week 4'],
                     datasets: [
                         {
-                            label: 'Children (Age 3-12)',
-                            data: [90, 40, 50, 60, 80],
-                            fill: true,
-                            backgroundColor: 'rgba(23, 23, 23, 0.1)', // Light gray
-                            borderColor: '#e5e5e5',
-                            pointBackgroundColor: '#e5e5e5',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: '#e5e5e5'
-                        },
-                        {
-                            label: 'Adults (Age 18-60)',
-                            data: [40, 85, 90, 80, 60],
-                            fill: true,
-                            backgroundColor: 'rgba(23, 23, 23, 0.6)', // Mid gray/black
-                            borderColor: '#525252',
-                            pointBackgroundColor: '#525252',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: '#525252'
-                        },
-                        {
-                            label: 'Elderly (Age 65+)',
-                            data: [85, 30, 85, 90, 95],
-                            fill: true,
-                            backgroundColor: 'rgba(23, 23, 23, 0.9)', // Solid black
+                            label: 'Manual Interactions (Voice/Gestures)',
+                            data: [25, 18, 8, 3, 1],
                             borderColor: '#171717',
+                            backgroundColor: 'rgba(23, 23, 23, 0.05)',
+                            fill: true,
+                            tension: 0.4,
                             pointBackgroundColor: '#171717',
-                            pointBorderColor: '#fff',
-                            pointHoverBackgroundColor: '#fff',
-                            pointHoverBorderColor: '#171717'
+                            pointBorderWidth: 0,
+                            pointRadius: 4
+                        },
+                        {
+                            label: 'AURA Autonomous Actions',
+                            data: [2, 10, 20, 26, 28],
+                            borderColor: '#a3a3a3', 
+                            borderDash: [5, 5],
+                            backgroundColor: 'transparent',
+                            tension: 0.4,
+                            pointRadius: 0
                         }
                     ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    elements: {
-                        line: {
-                            borderWidth: 2
-                        }
-                    },
+                    interaction: { mode: 'index', intersect: false },
                     plugins: {
-                        legend: { 
-                            position: 'bottom', 
-                            labels: { 
-                                boxWidth: 12, 
-                                usePointStyle: true, 
-                                font: {size: 11} 
-                            } 
-                        },
+                        legend: { position: 'bottom', labels: { boxWidth: 12, usePointStyle: true, font: {size: 11} } },
                         tooltip: { backgroundColor: '#171717', padding: 12 }
                     },
                     scales: {
-                        r: {
-                            angleLines: { color: '#f5f5f5' },
-                            grid: { color: '#f5f5f5' },
-                            pointLabels: {
-                                font: { size: 10, family: "'Inter', sans-serif" },
-                                color: '#171717'
-                            },
-                            ticks: { display: false, min: 0, max: 100 }
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            grid: { color: '#f5f5f5', drawBorder: false },
+                            border: { display: false }
+                        },
+                        x: { 
+                            grid: { display: false },
+                            border: { display: false }
                         }
                     }
                 }
